@@ -4,6 +4,8 @@ import project3 from '../assets/images/project3.jpg';
 import project4 from '../assets/images/project4.jpg';
 import project5 from '../assets/images/project5.jpg';
 import project6 from '../assets/images/project6.jpg';
+import project7 from '../assets/images/project7.jpg';
+import project8 from '../assets/images/project8.jpg';
 import { FaGithub, FaLaptop, FaPhoneAlt  } from "react-icons/fa";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoMdMail  } from "react-icons/io";
@@ -49,10 +51,10 @@ export const projects = [
     { 
         projectType: "React Project",
         img: project3, 
-        desc: "Todo List Project using React and Typescript including drag and drop functionalities",
-        url: "https://shinpaingmin-todolist-ts.netlify.app/",
-        urlType: "Live Demo",
-        Icon: FaLaptop,
+        desc: "The Laravel-React Fullstack Application for CRUD including user authentication and authorization",
+        url: "https://github.com/shinpaingmin/laravel-react-full-stack-app",
+        urlType: "View Code",
+        Icon: FaGithub,
     },
 
     { 
@@ -82,7 +84,23 @@ export const projects = [
         Icon: FaLaptop,
     },
 
+    { 
+        projectType: "React Project",
+        img: project7, 
+        desc: "A Fully-functional Shopping Cart in React JS using useReducer hook",
+        url: "https://shinpaingmin-shopping-cart.netlify.app/home",
+        urlType: "Live Demo",
+        Icon: FaLaptop,
+    },
 
+    { 
+        projectType: "React Project",
+        img: project8, 
+        desc: "Todo List Project using React and Typescript including drag and drop functionalities",
+        url: "https://shinpaingmin-todolist-ts.netlify.app/",
+        urlType: "Live Demo",
+        Icon: FaLaptop,
+    },
 ];
 
 export const contacts = [

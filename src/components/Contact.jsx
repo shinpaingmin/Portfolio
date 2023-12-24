@@ -48,20 +48,20 @@ const Contact = ({ setSuccess }) => {
     };  
 
     return (
-        <section className="px-28 mt-40" id="contact">
-            <h1 className="text-4xl font-bold mb-24 text-center">Contact Me</h1>
+        <section className="px-4 md:px-28 mt-16 md:mt-40" id="contact">
+            <h1 className="text-3xl md:text-4xl font-bold mb-14 md:mb-24 text-center">Contact Me</h1>
 
-            <div className="grid grid-cols-2 gap-8">
-                <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className='order-2 md:order-1'>
                     
                     {
                         contacts.map((c, i) => (
-                            <div key={i} className="flex items-center mb-6">
+                            <div key={i} className="md:flex items-center mb-6">
                                 <c.Icon size={28} className="mr-3" />
 
                                 <div>
                                     <h3 className="capitalize text-xl">{c.title}</h3>
-                                    <p>{c.desc}</p>
+                                    <p className="text-wrap">{c.desc}</p>
                                 </div>
                             </div>
                         ))
@@ -69,7 +69,7 @@ const Contact = ({ setSuccess }) => {
                     
                 </div>
 
-                <div>
+                <div className='order-1 md:order-2'>
                     <form ref={form} onSubmit={sendEmail}>
                         <div className='flex flex-col mb-5'>
                             <label className="mb-3">Name</label>

@@ -14,13 +14,14 @@ const Hero = () => {
     }
 
   return (
-    <section className="flex justify-around items-center px-8 mt-32">
-        <div className="w-1/2">
-            <p className="text-zinc-600 text-lg font-semibold mb-4">Hello I&apos;m</p>
+    <section className="flex max-md:flex-col-reverse
+                         justify-around items-center px-4 md:px-8 mt-16 md:mt-32">
+        <div className="md:w-1/2 max-md:mt-12">
+            <p className="text-zinc-600 text-lg font-semibold mb-4 max-md:text-center">Hello I&apos;m</p>
 
-            <h1 className="text-5xl font-bold mb-4">Shin Paing Min</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 max-md:text-center">Shin Paing Min</h1>
 
-            <h2 className="text-4xl font-semibold text-zinc-600 mb-4">Full-stack Web Developer</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-zinc-600 mb-4 max-md:text-center">Full-stack Web Developer</h2>
 
             <p className="text-justify text-zinc-600 mb-4">
             I am a dedicated 21-year-old Web Developer with a fervent passion for full-stack web development. Proficient in a diverse array of web programming languages, including <span className='font-semibold text-black'>HTML, CSS, JavaScript, React, Typescript, PHP, Laravel and MySQL, etc.</span> I thrive on the dynamic challenges of creating smooth and user-centric web experiences.
@@ -44,8 +45,8 @@ const Hero = () => {
             </div>
         </div>
 
-        <div className='w-1/4'>
-            <div className="w-96 h-96 ">
+        <div className='md:w-1/4'>
+            <div className="w-72 h-72 md:w-96 md:h-96 ">
                 <img src={profile} alt="profile" 
                                     className='w-full h-full 
                                                 rounded-full object-cover object-center' />

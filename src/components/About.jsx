@@ -2,10 +2,10 @@ import profile from '../assets/images/profile2.jpg';
 
 const About = () => {
   return (
-    <section className="px-28 mt-40" id='about'>
-        <h1 className="text-4xl font-bold mb-24 text-center">About Me</h1>
+    <section className="px-4 md:px-28 mt-16 md:mt-40" id='about'>
+        <h1 className="text-3xl md:text-4xl font-bold mb-12 md:mb-24 text-center">About Me</h1>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="h-96">
                 <img src={profile} alt="profile" className='w-full h-full object-cover object-center' />
             </div>
@@ -28,13 +28,13 @@ const About = () => {
 
             <a href="https://drive.google.com/file/d/14ztTxADsp56vFsaQ6nFeUhc3XdOPK09d/view?usp=drive_link" target='_blink' 
                     rel="noreferrer"
-                    className='underline mr-4' >
+                    className='underline mr-4 max-md:block max-md:mb-2' >
                     Full-stack Developer Course Certificate 
             </a>
 
             <a href="https://drive.google.com/file/d/1V-m-wMqfFNGqg37AiVkbrGGCbnXdiaVz/view?usp=drive_link" target='_blink' 
                 rel="noreferrer"
-                className='underline' >
+                className='underline max-md:block max-md:mb-2' >
                 React Course Certificate
             </a>
         </div>

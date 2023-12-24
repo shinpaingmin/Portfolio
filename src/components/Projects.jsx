@@ -11,8 +11,8 @@ import Card from "./Card";
 const Projects = () => {
 
   return (
-    <section className="px-28 mt-40" id='projects'>
-        <h1 className="text-4xl font-bold mb-24 text-center">My Projects</h1>
+    <section className="px-4 md:px-28 mt-16 md:mt-40" id='projects'>
+        <h1 className="text-3xl md:text-4xl font-bold mb-12 md:mb-24 text-center">My Projects</h1>
             <Swiper grabCursor={true}
                     breakpoints={{
                         340: {
