@@ -9,34 +9,21 @@ import Skills from "./components/Skills"
 import { FaCheckCircle } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import Footer from "./components/Footer"
+import Alert from "./components/Alert"
 
 function App() {
   const [success, setSuccess] = useState(false);
   const [open, setOpen] = useState(false);
 
-    useEffect(() => {
-        open && document.body.classList.add('stop-scrolling');
-        !open && document.body.classList.remove('stop-scrolling');
-    }, [open])
+  useEffect(() => {
+      open && document.body.classList.add('stop-scrolling');
+      !open && document.body.classList.remove('stop-scrolling');
+  }, [open]);
 
   return (
     <>
-      <div className={`flex items-center p-4  ${success? "mb-4 mr-3 translate-x-0" : "mr-0 translate-x-full"} transition-all
-                     text-green-600 rounded-lg bg-blue-50 w-max
-                     fixed bottom-0 right-0`} 
-            role="alert"
-      >
-          <div className="flex items-center mr-5">
-            <FaCheckCircle size={24} />
-            <p className="ml-3">
-              Thanks for contacting me!
-            </p>
-          </div>
-
-          <RxCross2 size={24} 
-                    className="cursor-pointer"
-                    onClick={() => setSuccess(false)} />
-      </div>
+      <Alert success={success} setSuccess={setSuccess} 
+              FaCheckCircle={FaCheckCircle} RxCross2={RxCross2} />
       <Header open={open} setOpen={setOpen} />
       <Hero />
       <About />

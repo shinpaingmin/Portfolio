@@ -11,28 +11,14 @@
 
 @layer utilities {
   .hamburger {
-      position: relative;
-      top: 8px;
-      right: 10px;
-      cursor: pointer;
-      width: 30px;
-      height: 30px;
-      background-color: none;
-      border: none;
-      outline: none;
-      z-index: 999;
+    @apply relative top-2 right-[10px] cursor-pointer w-[30px] h-[30px] bg-none border-none outline-none z-[999];
   }
 
   .hamburger-top,
   .hamburger-middle,
   .hamburger-bottom {
-      position: absolute;
-      width: 30px;
-      height: 3px;
-      top: 0;
-      left: 0;
-      background-color: white;
-      transition: all 0.5;
+    @apply absolute w-[30px] h-[3px] top-0 left-0 bg-white;
+    transition: all 0.5;
   }
 
   .hamburger-middle {
