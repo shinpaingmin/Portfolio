@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react"
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import Projects from "./components/Projects"
-import Skills from "./components/Skills"
-
+import { lazy, Suspense, useEffect, useState } from "react"
 import { FaCheckCircle } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
-import Footer from "./components/Footer"
 import Alert from "./components/Alert"
+import Spinner from "./components/Spinner";
+
+const Header = lazy(() => import("./components/Header"));
+const Hero = lazy(() => import("./components/Hero")); 
+const About = lazy(() => import("./components/About")); 
+const Skills = lazy(() => import("./components/Skills")); 
+const Projects = lazy(() => import("./components/Projects")); 
+const Contact = lazy(() => import("./components/Contact")); 
+const Footer = lazy(() => import("./components/Footer"));  
 
 function App() {
   const [success, setSuccess] = useState(false);
@@ -24,13 +25,15 @@ function App() {
     <>
       <Alert success={success} setSuccess={setSuccess} 
               FaCheckCircle={FaCheckCircle} RxCross2={RxCross2} />
-      <Header open={open} setOpen={setOpen} />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact setSuccess={setSuccess} />
-      <Footer />
+      <Suspense fallback={<Spinner />}>
+        <Header open={open} setOpen={setOpen} />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact setSuccess={setSuccess} />
+        <Footer />
+      </Suspense>
     </>
   )
 }

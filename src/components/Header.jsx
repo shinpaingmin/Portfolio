@@ -36,20 +36,20 @@ const Header = ({ open, setOpen }) => {
 
     <div className={`${open ? "overlay-show" : ""}`}></div>
 
-        {/* mobile menu  */}
+    {/* mobile menu  */}
 
-        <div className={`mobile-main-menu ${open && "show"}`}>
-            <ul>
-                {
-                    navLinks.map((link, i) => (
-                        <li key={i}>
-                            <Link to={link.href} className="ml-8 cursor-pointer" onClick={() => setOpen(false)}
-                                smooth duration={500} offset={-50}>{ link.label }</Link>
-                        </li>
-                    ))
-                }
-            </ul>
-        </div>
+    <div className={`mobile-main-menu ${open && "show"}`}>
+        <ul>
+            {
+                navLinks.map((link, i) => (
+                    <li key={i}>
+                        <Link to={link.href} className="ml-8 cursor-pointer" onClick={() => setOpen(false)}
+                            smooth duration={500} offset={-50}>{ link.label }</Link>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
     </>
   )
 }
