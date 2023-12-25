@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Header from "./components/Header"
@@ -12,6 +12,12 @@ import Footer from "./components/Footer"
 
 function App() {
   const [success, setSuccess] = useState(false);
+  const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        open && document.body.classList.add('stop-scrolling');
+        !open && document.body.classList.remove('stop-scrolling');
+    }, [open])
 
   return (
     <>
@@ -31,7 +37,7 @@ function App() {
                     className="cursor-pointer"
                     onClick={() => setSuccess(false)} />
       </div>
-      <Header />
+      <Header open={open} setOpen={setOpen} />
       <Hero />
       <About />
       <Skills />

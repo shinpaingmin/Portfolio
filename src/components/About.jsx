@@ -2,10 +2,10 @@ import profile from '../assets/images/profile2.jpg';
 
 const About = () => {
   return (
-    <section className="px-4 md:px-28 mt-16 md:mt-40" id='about'>
-        <h1 className="text-3xl md:text-4xl font-bold mb-12 md:mb-24 text-center">About Me</h1>
+    <section className="px-4 lg:px-20 xl:px-28 mt-16 lg:mt-40" id='about'>
+        <h1 className="text-3xl md:text-4xl font-bold mb-12 lg:mb-24 text-center">About Me</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="h-96">
                 <img src={profile} alt="profile" className='w-full h-full object-cover object-center' />
             </div>

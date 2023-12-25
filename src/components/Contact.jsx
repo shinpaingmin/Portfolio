@@ -48,19 +48,21 @@ const Contact = ({ setSuccess }) => {
     };  
 
     return (
-        <section className="px-4 md:px-28 mt-16 md:mt-40" id="contact">
-            <h1 className="text-3xl md:text-4xl font-bold mb-14 md:mb-24 text-center">Contact Me</h1>
+        <section className="px-4 lg:px-20 xl:px-28 mt-16 lg:mt-40" id="contact">
+            <h1 className="text-3xl md:text-4xl font-bold mb-14 lg:mb-24 text-center">Contact Me</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className='order-2 md:order-1'>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className='order-2 lg:order-1'>
                     
                     {
                         contacts.map((c, i) => (
                             <div key={i} className="md:flex items-center mb-6">
-                                <c.Icon size={28} className="mr-3" />
-
+                                <div className='flex items-center'>
+                                    <c.Icon size={24} className="mr-3" />
+                                    <h3 className="capitalize text-xl font-bold block md:hidden">{c.title}</h3>
+                                </div>
                                 <div>
-                                    <h3 className="capitalize text-xl">{c.title}</h3>
+                                    <h3 className="capitalize text-xl font-bold hidden md:block">{c.title}</h3>
                                     <p className="text-wrap">{c.desc}</p>
                                 </div>
                             </div>
@@ -69,7 +71,7 @@ const Contact = ({ setSuccess }) => {
                     
                 </div>
 
-                <div className='order-1 md:order-2'>
+                <div className='order-1 lg:order-2'>
                     <form ref={form} onSubmit={sendEmail}>
                         <div className='flex flex-col mb-5'>
                             <label className="mb-3">Name</label>
