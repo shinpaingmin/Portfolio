@@ -13,7 +13,7 @@ const About = () => {
             <div className="">
             <h1 className="text-2xl font-bold mb-4">IT Computing Student</h1>
 
-            <p className="text-justify text-zinc-600 p-l-5 mb-4">I am currently pursuing a Diploma in Computing at MST University through NCC Education. My journey into coding began in 2021, where I acquired programming skills by diligently watching educational content on YouTube, joining online classes and studying online documentation. Beyond my current proficiency, I am a proactive learner, eagerly seeking opportunities to expand my skill on further more languages. With a keen eye for detail and a drive for innovation, I approach with the creativity and technical precision to every project, ensuring the delivery of high-quality, responsive, and efficient user-friendly web applications.
+            <p className="text-justify text-zinc-600 p-l-5 mb-4">I am currently pursuing a Diploma in Computing at MST University through NCC Education. My journey into coding began in 2021, when I acquired programming skills by diligently watching educational content on YouTube, joining online classes and studying online documentation. Beyond my current proficiency, I am a proactive learner, eagerly seeking opportunities to expand my skill on further more languages. With a keen eye for detail and a drive for innovation, I approach with the creativity and technical precision to every project, ensuring the delivery of high-quality, responsive, and efficient user-friendly web applications.
             </p>
 
             <button type='button'
